@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+body{
+    font-family: 'Open Sans',sans-serif;
+    background-color: black; /* we have a background colour, another background thats smaller, and then the calculator */
+}
+
+.container{
+    widows: 1000px;
+    height:550px;
+    background-image: linear-gradient(rgba(0,0,0,0.3)rgba(0,0,0,0.3)),url(calc.jpg); /*this allows backgr col to appear faded so that calc stands out more*/
+    margin: 20px auto; /*top and bottom spacing is set to 20 pixels and left and right is set to auto*/
+}
+
+
+#calculator{
+    width:320px;
+    height:520px;
+    background-color: #eaedef;
+    margin:0 auto;
+    top: 20px; /*give it some space at the top*/
+    position: relative;
+    border-radius: 5px; /*for curved edges*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+}
