@@ -7,20 +7,104 @@ body{
 
 .container{
     widows: 1000px;
-    height:550px;
-    background-image: linear-gradient(rgba(0,0,0,0.3)rgba(0,0,0,0.3)),url(calc.jpg); /*this allows backgr col to appear faded so that calc stands out more*/
+    height:580px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(calc.jpg);   
     margin: 20px auto; /*top and bottom spacing is set to 20 pixels and left and right is set to auto*/
 }
 
 
 #calculator{
     width:320px;
-    height:520px;
+    height:540px;
     background-color: #eaedef;
     margin:0 auto;
     top: 20px; /*give it some space at the top*/
     position: relative;
     border-radius: 5px; /*for curved edges*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+/*the calculater  has a section to display input and for results*/
+}
+
+#result{
+    height:120px;
+}
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
+}
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+#keyboard{
+    height:400px;
+}  /*keyboard takes alot of space*/
+
+.operator, .number, .empty {
+    width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%; /*circle*/
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+    
 
 }
+.number, .empty{
+    background-color:#eaedef ;
+
+}
+
+.operator, .number{
+    cursor: pointer;
+}
+
+.operator:active, .number:active{
+    /*give it some style when the user clicks, when you click it appears to be small*/
+    font-size:13px;
+
+}
+
+.operator:focus, .number:focus, .empty:focus{
+    outline:0; 
+}
+    /*outline disspears/*
+
+  /*every 4th button in the row needs to be changed.we use nth child selector to select these elements seperately*/
+
+  button:nth-child(4){/*giving them a bigger font abd bgcol*/
+    font-size:20px;
+    background-color: #20b2aa;
+  }
+
+  /*do the same for the rest of the operators, every 4th element*/
+
+  button:nth-child(8){
+      font-size:20px;
+      background-color: #ffa500;
+  }
+
+  button:nth-child(12){
+    font-size:20px;
+    background-color: #f08080;
+}
+
+button:nth-child(16){
+    font-size:20px;
+    background-color: #7d93e0;
+}
+
+button:nth-child(20){
+    font-size:20px;
+    background-color: #9477af;
+}
+
+/*we use javascript for the logic*/
